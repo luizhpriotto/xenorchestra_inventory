@@ -1,6 +1,8 @@
-## How to use:
+## Dynamic Invetory to use in Ansible.
 
-Example of call: docker run --rm -e XOA_HOST="192.168.1.1" -e XOA_USER="xoa" -e XOA_PASS="123456" luizhpriotto/xenorchestra_inventory
+### How to use:
+
+**Example of call:** docker run --rm -e XOA_HOST="192.168.1.1" -e XOA_USER="xoa" -e XOA_PASS="123456" luizhpriotto/xenorchestra_inventory
 
 It was used the xo-cli to get the Dynamic Inventory:
 
@@ -8,7 +10,7 @@ It was used the xo-cli to get the Dynamic Inventory:
 
 The version of npm package used is 0.11.1
 
-To use on Ansible:
+Example of using on Ansible:
 
 docker run --rm -e XOA_HOST="192.168.1.1" -e XOA_USER="xoa" -e XOA_PASS="123456" luizhpriotto/xenorchestra_inventory > invent.ini
 
@@ -16,7 +18,7 @@ ansible master -m ping --private-key xoa_rsa -u debian --become-method su --beco
 
 The dynamic inventary is based on system tags of Xen Orchestra.
 
-## Example of invent.ini:
+### Example of invent.ini:
 
 ```
 [kub]
