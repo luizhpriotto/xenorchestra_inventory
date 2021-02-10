@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 COPY . .
 
 RUN apt-get -y update && \
-    DEBIAN_FRONTEND=noninteractive apt-get -y install ansible wget unzip  npm && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y install npm && \
     npm install --global xo-cli@0.11.1 && \
     apt-get clean autoclean && \
     apt-get autoremove --yes && \
